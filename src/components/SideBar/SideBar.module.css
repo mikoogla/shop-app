@@ -6,4 +6,6 @@
   text-orientation: mixed;
   text-align: center;
   padding: 0px 7px 0px 7px;
+  white-space: nowrap;
+  overflow: hidden;
 }
