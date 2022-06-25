@@ -1,0 +1,9 @@
+.main {
+  height: 100%;
+  background-color: black;
+  color: aliceblue;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  padding: 0px 7px 0px 7px;
+}

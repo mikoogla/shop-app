@@ -1,0 +1,9 @@
+.main {
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  background-color: var(--accent_1);
+  height: var(--navbar-height);
+}

@@ -1,0 +1,11 @@
+:root {
+  height: 100%;
+  --accent_1: rgb(56, 219, 143);
+  --navbar-height: 40px;
+}
+body {
+  width: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
