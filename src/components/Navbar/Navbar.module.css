@@ -1,8 +1,13 @@
 .main {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: var(--accent_1);
   padding: 5px 0px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
 }

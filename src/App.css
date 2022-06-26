@@ -1,7 +1,13 @@
 :root {
   height: 100%;
+  overflow: hidden;
   --accent_1: rgb(56, 219, 143);
-  --navbar-height: 40px;
+  --accent_1_dark: #2daf72;
+  --accent_1_darker: #0a2418;
+  --accent_2: #fffa59;
+  --border_color: black;
+  --font_color: black;
+  --font_color_reversed: rgb(255, 255, 255);
 }
 body {
   width: 100%;

@@ -1,0 +1,5 @@
+.main {
+  background-color: var(--accent_2);
+  width: 40vw;
+  max-width: 500px;
+}
