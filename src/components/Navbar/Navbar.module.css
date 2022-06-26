@@ -1,11 +1,8 @@
 .main {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
-  padding: 0px;
-  position: absolute;
+  align-items: center;
   width: 100%;
-  display: flex;
   background-color: var(--accent_1);
-  height: var(--navbar-height);
+  padding: 5px 0px;
 }
