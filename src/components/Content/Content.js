@@ -7,7 +7,6 @@ export default function Content() {
   return (
     <div className={styles.main}>
       <Header />
-      Manu below:
       <Menu />
     </div>
   );
