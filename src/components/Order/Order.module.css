@@ -1,7 +1,14 @@
 .main {
+  overflow-x: hidden;
   background-color: var(--accent_2);
-  margin: 0px 0px 40px 0px;
   width: 40vw;
   max-width: 500px;
   overflow-y: auto;
+  transition: width 0.5s;
+}
+@media (max-width: 750px) {
+  .main {
+    width: 100%;
+    max-width: unset;
+  }
 }
