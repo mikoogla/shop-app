@@ -15,6 +15,7 @@
 .ConfirmButton {
   background-color: var(--accent_1);
   white-space: nowrap;
+  margin-bottom: 10px;
 }
 @media (max-width: 750px) {
   .main {
