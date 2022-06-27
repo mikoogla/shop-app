@@ -1,10 +1,20 @@
 .main {
   overflow-x: hidden;
+  margin: 0 0 40px 0;
   background-color: var(--accent_2);
   width: 40vw;
   max-width: 500px;
   overflow-y: auto;
   transition: width 0.5s;
+}
+.ConfirmDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ConfirmButton {
+  background-color: var(--accent_1);
+  white-space: nowrap;
 }
 @media (max-width: 750px) {
   .main {

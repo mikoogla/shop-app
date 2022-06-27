@@ -9,7 +9,9 @@ const Context = createContext({
 
 export function ContextProvider(props) {
   const [HideOrder, setHideOrder] = useState(true);
-  const [isMobile, setisMobile] = useState(false);
+  const [isMobile, setisMobile] = useState(
+    window.innerWidth < 750 ? true : false
+  );
   useEffect(() => {
     function handleResize() {
       window.innerWidth < 750 ? setisMobile(true) : setisMobile(false);
