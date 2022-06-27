@@ -5,8 +5,10 @@ import Context from "../../../context";
 export default function ShoppingCart() {
   const context = useContext(Context);
   return (
-    <div>
-      <Button onClick={context.handleOrderVisibility}>Shopping cart</Button>
+    <div className={styles.main}>
+      <Button onClick={context.handleOrderVisibility}>
+        {context.HideOrder ? "Open Basket" : "Close Basket"}
+      </Button>
     </div>
   );
 }

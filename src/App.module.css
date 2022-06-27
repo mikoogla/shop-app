@@ -11,5 +11,5 @@
   height: 100%;
 }
 .HideOrderStyle {
-  width: 0px;
+  width: 0px !important;
 }
