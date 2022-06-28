@@ -8,6 +8,7 @@ export default function MenuItem(props) {
   const context = useContext(Context);
   function ok() {
     context.addOrder(props.item);
+    context.addToBasket(props.item);
   }
   return (
     <Card className={styles.main}>

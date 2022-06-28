@@ -4,20 +4,53 @@ const Context = createContext({
   HideOrder: true,
   isMobile: null,
   Orders: [],
+  Basket: [],
   setHideOrder: () => {},
   handleOrderVisibility: () => {},
   addOrder: () => {},
+  addToBasket: () => {},
+  removeFromBasket: () => {},
+  removeOrder: () => {},
 });
-
 export function ContextProvider(props) {
   const [HideOrder, setHideOrder] = useState(true);
   const [Orders, setOrders] = useState([]);
+  const [Basket, setBasket] = useState([]);
   const [isMobile, setisMobile] = useState(
     window.innerWidth < 750 ? true : false
   );
   const addOrder = (order) => {
     setOrders(() => [...Orders, order]);
   };
+
+  const removeOrder = (order) => {
+    const i = Orders.map((el) => el.element).indexOf(order);
+    setOrders(() => Orders.splice(i, 1));
+  };
+
+  const addToBasket = (item) => {
+    let tempBasket = Basket;
+    const i = tempBasket.map((el) => el.element).indexOf(item);
+    if (i === -1) {
+      tempBasket.push({ element: item, counter: 1 });
+    } else {
+      tempBasket[i].counter += 1;
+    }
+    setBasket(tempBasket);
+  };
+
+  const removeFromBasket = (item) => {
+    let tempBasket = Basket;
+    const i = tempBasket.map((el) => el.element).indexOf(item);
+    if (i === -1) {
+      console.log("element not found");
+    } else {
+      if (tempBasket[i].counter > 1) tempBasket[i].counter -= 1;
+      else if (tempBasket[i].counter <= 1) tempBasket.splice(i, 1);
+    }
+    setBasket(tempBasket);
+  };
+
   useEffect(() => {
     function handleResize() {
       window.innerWidth < 750 ? setisMobile(true) : setisMobile(false);
@@ -41,6 +74,10 @@ export function ContextProvider(props) {
         isMobile: isMobile,
         Orders: Orders,
         addOrder: addOrder,
+        Basket: Basket,
+        addToBasket: addToBasket,
+        removeFromBasket: removeFromBasket,
+        removeOrder: removeOrder,
       }}
     >
       {props.children}

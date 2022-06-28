@@ -6,6 +6,7 @@
   background-color: var(--accent_1_darker);
   gap: 10px;
   color: var(--font_color_reversed);
+  overflow: hidden;
 }
 .orderButton {
   width: 100%;
