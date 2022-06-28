@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import Button from "../../UI/Button/Button";
 import styles from "./Order.module.css";
 import OrderItem from "./OrderItem/OrderItem";
