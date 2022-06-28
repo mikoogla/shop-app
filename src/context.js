@@ -25,7 +25,8 @@ export function ContextProvider(props) {
 
   const removeOrder = (order) => {
     const i = Orders.map((el) => el.element).indexOf(order);
-    setOrders(() => Orders.splice(i, 1));
+    Orders.splice(i, 1);
+    setOrders(() => [...Orders]);
   };
 
   const addToBasket = (item) => {
@@ -43,7 +44,6 @@ export function ContextProvider(props) {
     let tempBasket = Basket;
     const i = tempBasket.map((el) => el.element).indexOf(item);
     if (i === -1) {
-      console.log("element not found");
     } else {
       if (tempBasket[i].counter > 1) tempBasket[i].counter -= 1;
       else if (tempBasket[i].counter <= 1) tempBasket.splice(i, 1);
@@ -54,7 +54,6 @@ export function ContextProvider(props) {
   useEffect(() => {
     function handleResize() {
       window.innerWidth < 750 ? setisMobile(true) : setisMobile(false);
-      console.log("is mobile: " + isMobile);
     }
     window.addEventListener("resize", handleResize);
     return () => {

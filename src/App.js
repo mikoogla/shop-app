@@ -13,7 +13,6 @@ function App() {
     <div className={styles.main}>
       <Navbar />
       <div className={styles.content}>
-        {/* {context.isMobile ? context.HideOrder && <Content /> : <Content />} */}
         <Content
           className={`${styles.menu} ${
             context.isMobile && !context.HideOrder && styles.HideOrderStyle

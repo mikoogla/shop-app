@@ -8,13 +8,17 @@
   overflow-y: auto;
   transition: width 0.5s;
 }
-.ConfirmDiv {
+.summary {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  background-color: var(--accent_3);
+  overflow: hidden;
 }
 .ConfirmButton {
-  background-color: var(--accent_1);
+  background-color: var(--accent_4);
   white-space: nowrap;
   margin-bottom: 10px;
 }
