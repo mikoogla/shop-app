@@ -9,6 +9,7 @@
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   align-items: center;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 @media (hover: hover) {

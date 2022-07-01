@@ -17,7 +17,7 @@ export default function Order(props) {
           <OrderItem item={e.element} count={e.counter} />
         ))}
         <Card className={styles.summary}>
-          Total: {Sum}
+          Total: {Sum.toFixed(2)} {context.Currency}
           <Button className={styles.ConfirmButton}>Confirm Order</Button>
         </Card>
       </div>

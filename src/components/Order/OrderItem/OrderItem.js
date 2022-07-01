@@ -13,10 +13,17 @@ export default function OrderItem(props) {
   };
   return (
     <Card className={styles.main}>
-      <div>Name: {props.item.name}</div>
-      <div>Price: {props.item.price}</div>
-      <div>Count: {props.count}</div>
-      <Button onClick={handleRemove}>Remove item</Button>
+      <div>
+        <div>
+          {props.count}x {props.item.name}
+        </div>
+        <div>
+          {props.item.price.toFixed(2)} {context.Currency}
+        </div>
+      </div>
+      <div>
+        <Button onClick={handleRemove}>Remove item</Button>
+      </div>
     </Card>
   );
 }

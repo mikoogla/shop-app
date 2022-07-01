@@ -5,6 +5,7 @@ const Context = createContext({
   isMobile: null,
   Orders: [],
   Basket: [],
+  Currency: "",
   setHideOrder: () => {},
   handleOrderVisibility: () => {},
   addOrder: () => {},
@@ -13,6 +14,7 @@ const Context = createContext({
   removeOrder: () => {},
 });
 export function ContextProvider(props) {
+  const Currency = "PLN";
   const [HideOrder, setHideOrder] = useState(true);
   const [Orders, setOrders] = useState([]);
   const [Basket, setBasket] = useState([]);
@@ -77,6 +79,7 @@ export function ContextProvider(props) {
         addToBasket: addToBasket,
         removeFromBasket: removeFromBasket,
         removeOrder: removeOrder,
+        Currency: Currency,
       }}
     >
       {props.children}

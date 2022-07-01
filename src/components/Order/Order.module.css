@@ -14,11 +14,11 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: var(--accent_3);
+  background-color: var(--accent_1_dark);
   overflow: hidden;
 }
 .ConfirmButton {
-  background-color: var(--accent_4);
+  background-color: var(--accent_2);
   white-space: nowrap;
   margin-bottom: 10px;
 }
