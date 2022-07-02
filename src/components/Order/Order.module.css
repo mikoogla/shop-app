@@ -25,6 +25,10 @@
 .content {
   margin: 40px 0 40px 0;
 }
+.warning {
+  color: var(--accent_4);
+  filter: brightness(50%);
+}
 @media (max-width: 750px) {
   .main {
     width: 100%;

@@ -9,21 +9,22 @@ import Context from "./context";
 
 function App() {
   const context = useContext(Context);
+
+  const Content_Styles_Logic = `${styles.menu} ${
+    context.isMobile && !context.HideOrder && styles.HideOrderStyle
+  }`;
+
+  const Order_Styles_Logic = ` ${styles.menu} ${
+    context.HideOrder && styles.HideOrderStyle
+  }`;
+
   return (
     <div className={styles.main}>
       <Navbar />
       <div className={styles.content}>
-        <Content
-          className={`${styles.menu} ${
-            context.isMobile && !context.HideOrder && styles.HideOrderStyle
-          }`}
-        />
+        <Content className={Content_Styles_Logic} />
         <SideBar />
-        <Order
-          className={` ${styles.menu} ${
-            context.HideOrder && styles.HideOrderStyle
-          }`}
-        />
+        <Order className={Order_Styles_Logic} />
       </div>
     </div>
   );
