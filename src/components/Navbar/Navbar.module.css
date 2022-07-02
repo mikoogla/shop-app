@@ -1,7 +1,8 @@
 .main {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  max-width: 100%;
   background-color: var(--accent_1);
   padding: 5px 0px;
 }
@@ -9,5 +10,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 98%;
+  width: 93%;
 }

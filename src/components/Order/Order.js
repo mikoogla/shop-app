@@ -22,13 +22,13 @@ export default function Order(props) {
       setNoItems(true);
       return;
     }
-    setisOrderPlaced((e) => !e);
+    setisOrderPlaced(() => (isOrderPlaced ? false : true));
   };
   return (
     <div className={`${props.className} ${styles.main}`}>
       <div className={styles.content}>
         {context.Basket.map((e) => (
-          <OrderItem item={e.element} count={e.counter} />
+          <OrderItem key={e.element.name} item={e.element} count={e.counter} />
         ))}
         <Card className={styles.summary}>
           {NoItems && <NoItemsWarning />}

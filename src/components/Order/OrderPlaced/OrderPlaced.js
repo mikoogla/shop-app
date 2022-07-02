@@ -4,11 +4,11 @@ import Button from "../../../UI/Button/Button";
 import styles from "./OrderPlaced.module.css";
 
 export default function OrderPlaced(props) {
-  const GoBack = () => {
+  function GoBack() {
     props.onGoBack();
-  };
+  }
   return (
-    <div className={styles.bg} onClick={GoBack}>
+    <div onClick={GoBack} className={styles.bg}>
       <Card className={styles.content}>
         <div>The order has been placed successfully</div>
         <Button onClick={GoBack}>Go back</Button>
