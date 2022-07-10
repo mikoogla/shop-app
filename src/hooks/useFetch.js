@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-const useHttp = () => {
+const useFetch = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -33,4 +33,4 @@ const useHttp = () => {
   };
 };
 
-export default useHttp;
+export default useFetch;
