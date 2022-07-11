@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import MenuItem from "./Menu-Item/MenuItem";
-import { menu } from "../../../DB/Menu";
 import styles from "./Menu.module.css";
 import { DatabaseURL } from "../../../private/WorkoutApp-private/Private";
 import useFetch from "../../../hooks/useFetch";
@@ -13,7 +12,7 @@ export default function Menu() {
 
     for (const key in obj) {
       loadedTasks.push({
-        id: key,
+        id: Math.random(),
         name: obj[key].name,
         description: obj[key].description,
         price: +obj[key].price,
@@ -30,7 +29,8 @@ export default function Menu() {
 
   useEffect(() => {
     getMenu();
-  }, [getMenu]);
+    console.log("getMenu");
+  }, []);
 
   return (
     <div className={styles.main}>

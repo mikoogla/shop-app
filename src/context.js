@@ -22,6 +22,7 @@ export function ContextProvider(props) {
     window.innerWidth < 750 ? true : false
   );
   const addOrder = (order) => {
+    console.log("addOrder");
     setOrders(() => [...Orders, order]);
   };
 
